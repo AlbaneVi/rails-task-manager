@@ -1,0 +1,16 @@
+<h1>My tasks</h1>
+<% @tasks.each do |task| %>
+  <% if task.completed %>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox"  id="checked" checked disabled>
+      <label class="custom-control-label" for="defaultUnchecked">
+      <%= task.title %></label>
+    </div>
+  <% else %>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" id="defaultUnchecked" disabled>
+      <label class="custom-control-label" for="defaultUnchecked">
+      <%= task.title %></label>
+  </div>
+  <% end %>
+<% end %>
